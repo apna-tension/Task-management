@@ -12,6 +12,7 @@ const Input = styled.input`
   border: none;
   border-radius: 4px;
   margin-right: 10px;
+  font-size: 20px;
 `;
 
 const Button = styled.button`
@@ -21,6 +22,7 @@ const Button = styled.button`
   background: #4caf50;
   color: white;
   cursor: pointer;
+  font-size: 20px;
 `;
 
 const AddTodo = ({ addTodo }) => {
