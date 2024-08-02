@@ -23,6 +23,7 @@ const TodoContainer = styled.div`
 const Title = styled.h1`
   color: white;
   margin-bottom: 20px;
+  font-size: 40px;
 `;
 
 const App = () => {
