@@ -1,32 +1,32 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect, useState } from 'react';
+import { deleteTodo } from '../api/todo';
+import { toast } from 'react-toastify';
+import './TodoItem.css';
 
-const Item = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  color: white;
-`;
+const TodoItem = ({ todo, onDelete }) => {
+  const [showDescription, setShowDescription] = useState(false);
 
-const DeleteButton = styled.button`
-  background: #ff5252;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  color: white;
-`;
+  const handleDelete = async () => {
+    try {
+      await deleteTodo(todo._id);
+      onDelete(todo._id);
+      toast.success('item deleted');
+    } catch (error) {
+      console.error(error);
+      
+      toast.error('Failed to delete item');
+    }
+  };
 
-const TodoItem = ({ todo, index, removeTodo }) => {
+
   return (
-    <Item>
-      {todo}
-      <DeleteButton onClick={() => removeTodo(index)}>Delete</DeleteButton>
-    </Item>
+    <div className="todo-item">
+      <div>
+        <h3 onClick={() => setShowDescription(!showDescription)}>{todo.title}</h3>
+        {showDescription && <p>{todo.description}</p>}
+      </div>
+      <button onClick={handleDelete}>Delete</button>
+    </div>
   );
 };
 
