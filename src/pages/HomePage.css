@@ -1,0 +1,48 @@
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .welcome-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .welcome-section h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  .welcome-section p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .register-link {
+    margin-top: 20px;
+  }
+  
+  .register-link p {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  .register-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  

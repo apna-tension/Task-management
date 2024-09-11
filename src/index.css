@@ -54,6 +54,28 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -67,11 +89,3 @@ button:focus-visible {
   }
 } 
 
-
-body {
-  margin: 0;
-  /* display: flex; */
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
